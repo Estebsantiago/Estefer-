@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estefer Servicios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Estefer Servicios</h1>
+    <p>Agenda tu servicio de forma rápida y sencilla</p>
+  </header>
+
+  <div class="container">
+    <div class="categoria">
+      <h2>Electricidad</h2>
+      <div class="servicio">
+        <span>Instalación de toma eléctrica</span>
+        <button onclick="agendar('Instalación de toma eléctrica')">Seleccionar</button>
+      </div>
+      <div class="servicio">
+        <span>Instalación de lámpara</span>
+        <button onclick="agendar('Instalación de lámpara')">Seleccionar</button>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h2>Plomería</h2>
+      <div class="servicio">
+        <span>Reparación de fuga de agua</span>
+        <button onclick="agendar('Reparación de fuga de agua')">Seleccionar</button>
+      </div>
+      <div class="servicio">
+        <span>Instalación de lavamanos</span>
+        <button onclick="agendar('Instalación de lavamanos')">Seleccionar</button>
+      </div>
+    </div>
+
+    <div class="formulario">
+      <h2>Agenda tu cita</h2>
+      <form id="formCita" onsubmit="return enviarWhatsApp()">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="tel" id="telefono" placeholder="Teléfono" required />
+        <input type="text" id="direccion" placeholder="Dirección" required />
+        <input type="date" id="fecha" required />
+        <input type="time" id="hora" required />
+        <textarea id="comentarios" rows="3" placeholder="Comentarios adicionales..."></textarea>
+        <input type="hidden" id="servicio" />
+        <button type="submit">Agendar Cita</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Estefer Servicios. Todos los derechos reservados.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
